@@ -13,7 +13,7 @@ For example, with value = -12, Little endian, in memory , would be:
 ```
 Big endian, in other word, would be:
 ```
-000000: F4
 000001: FF
+000000: F4
 ```
 Therefore, with different CPU, when converted from bytes to int, the result might be different.
