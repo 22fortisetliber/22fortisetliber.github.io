@@ -1,6 +1,6 @@
 +++
 title = "What does O(log n) mean exactly?"
-date = "2024-12-19"
+date = "2024-12-18"
 author = "Son Vu Thai"
 tags = [
     "Algorithm",
