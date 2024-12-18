@@ -18,8 +18,11 @@ The simplest method is to use hashing, by which all keys are assigned to a certa
 Consistent Hashing has 4 basic requirements:
 
 **Balance:** Every node holds a balanced number of keys.
+
 **Monotonicity:** When a new node is added, keys will only be transferred from the old node to the new node. -> to minimize the amount of data involved when nodes change.
+
 **Spread:** When each client can only see a portion of the nodes, the number of nodes that the key belongs to should be as small as possible. -> the consistent hashing algorithm must also ensure that the allocation of the same key is not too dispersed
+
 **Load:** For each client, at most a certain number of keys are considered to be stored in a node -> ensuring that a node does not store too many keys.
 
 ### 1. Hash ring
