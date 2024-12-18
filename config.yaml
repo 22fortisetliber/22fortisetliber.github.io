@@ -66,9 +66,12 @@ menu:
     - name: Blog
       url: /
       weight: 1
+    - name: Tags
+      url: /tags
+      weight: 2
     - name: Contact
       url: /contact
-      weight: 2
+      weight: 3
     - name: About
       url: /about
-      weight: 3
+      weight: 4
