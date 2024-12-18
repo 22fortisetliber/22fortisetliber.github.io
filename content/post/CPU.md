@@ -4,6 +4,7 @@ date = "2024-12-18"
 author = "Son Vu Thai"
 tags = [
     "Computing",
+    "Virtualization",
 ]
 +++
 
