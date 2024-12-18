@@ -3,6 +3,10 @@ title = "Endianness"
 description = "Some note about Endianness."
 date = "2024-12-17"
 author = "Son Vu Thai"
+tags = [
+    "algorithm",
+    "computing",
+]
 +++
 
 The term *endianness* describes the order in which computer memory stores a sequence of bytes. Little endian means the lower significant bytes get the lower addresses. Big endian means the other way around. 
