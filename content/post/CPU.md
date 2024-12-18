@@ -19,6 +19,7 @@ CPU Usage = CPU_Time_Busy / Total_CPU_Time * 100
 The CPU usage from libvirt consists of:
 
 **VCPU Usage:** the physical CPU time consumed by virtual CPU of virtual machine
+
 **Hypervisor:** the physical CPU time consumed by emulator stuffs
 
 Therefore, the time used by the VCPUs to run the virtual machine = sum(vcpu)[1...n]
