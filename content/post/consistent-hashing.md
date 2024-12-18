@@ -3,7 +3,7 @@ title = "Consistent Hashing"
 date = "2024-12-17"
 author = "Son Vu Thai"
 tags = [
-    "algorithm",
+    "Algorithm",
 ]
 +++
 ## Introduction
