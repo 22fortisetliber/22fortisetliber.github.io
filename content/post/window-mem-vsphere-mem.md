@@ -1,5 +1,5 @@
 +++
-title = "Quick Note about Memory"
+title = "Difference between memory in vSphere monitor and Window Task Manager"
 date = "2024-12-18"
 author = "Son Vu Thai"
 tags = [
@@ -7,8 +7,6 @@ tags = [
     "Virtualization",
 ]
 +++
-
-## 1. Difference between vSphere monitor and Window Task Manager
 
 Windows Task Manager will show memory consumed (i.e. allocated at some point in the past and not released since then). 
 This doesn't necessarily mean all of that memory is active; much of it could be inactive. vSphere shows memory demand/active: the amount of guest memory that's been recently accessed. 
