@@ -26,7 +26,7 @@ import sys
 import hashlib
 sys.byteorder # little
 
-h = hashlib.md5()
+h = hashlib.md5(b"test")
 dig = h.digest()
 print(int.from_bytes(dig, "little")) # 327925494462908176265137084817260384009
     
@@ -38,7 +38,7 @@ import sys
 import hashlib
 sys.byteorder # big
 
-h = hashlib.md5()
+h = hashlib.md5(b"test")
 dig = h.digest()
 print(int.from_bytes(dig, "big")) # 12707736894140473154801792860916528374
 ```
