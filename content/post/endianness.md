@@ -16,7 +16,7 @@ Big endian, in other word, would be:
 000001: FF
 000000: F4
 ```
-Therefore, with different CPU, when converted from bytes to int, the result might be different. Here's an example
+Therefore, with different CPU / diffrent hashing algorithm, when converted from bytes to int, the result might be different. Here's an example
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ import hashlib
 sys.byteorder # little
 
 h = hashlib.md5(b"test")
-dig = h.digest()
+dig = h.digest() // digest() return bytes sequence, in this case output is in little endian
 print(int.from_bytes(dig, "little")) # 327925494462908176265137084817260384009
     
 ```
@@ -39,7 +39,7 @@ import hashlib
 sys.byteorder # big
 
 h = hashlib.md5(b"test")
-dig = h.digest()
+dig = h.digest() // digest() return bytes sequence, in this case output is in little endian
 print(int.from_bytes(dig, "big")) # 12707736894140473154801792860916528374
 ```
 
