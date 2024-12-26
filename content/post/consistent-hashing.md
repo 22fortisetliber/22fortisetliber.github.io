@@ -28,3 +28,27 @@ Consistent Hashing has 4 basic requirements:
 ### 1. Hash ring
 Consistent Hashing is a distributed hashing scheme that operates independently of the number of servers or objects in a distributed hash table
 ![image](https://github.com/user-attachments/assets/791c8506-93c5-4327-bfd6-c4eac672d4d6)
+
+First, we select the hashing algorithm and sorted all hash result of all nodes into a list. When the request arrived, first, we calculate the hash results, then perform a search in the pre-computed list to find the node that responsible for handling the request. If the hash values of the request has exceeded the maximum values of list, we choose the smallest one.
+**Disadvantage:** The distribution of node is not balanced. Adding or removing nodes can cause a large of request should be re-assigned
+
+### 2. Virtual Nodes
+Common terms:
+. Real server: nodes, servers, shards
+. Virtual nodes: vnode, replicas, tokens
+
+Each real node corresponds to N virtual nodes. All virtual nodes are ramdomly distributed on the hash ring. After calculate the hash, we sequentially search for the nearest virtual nodes the query the real node represented by it.
+
+**Advantages:** Very good balance.
+
+**Disadvantages:** Requires storage of bidirectional relationships between all virtual nodes and nodes, requiring a large memory.
+
+### 3. Ketama
+Nginx and memcached also use this algorithm, essentially a hash ring algorithm with virtual nodes, although it’s unclear why it needs its own name.
+
+### 4. Spread-minimizing tokens
+
+
+
+### 5. Maglev Hashing
+
