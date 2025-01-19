@@ -1,5 +1,5 @@
 +++
-title = "Protobuf Buffer in Go"
+title = "Protocol Buffer in Go"
 date = "2025-01-16"
 author = "Son Vu Thai"
 tags = [
