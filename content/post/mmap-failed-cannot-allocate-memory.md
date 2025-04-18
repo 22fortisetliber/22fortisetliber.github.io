@@ -22,13 +22,12 @@ I need to confirm 2 point of views:
 
 I noticed this error occurred when the Ingester performed disk read/write operations, such as reading the WAL or compacting blocks and writing to disk. The servers had plenty of free memory, and disk space. Therefore, the answer of first question was YES.
 
-Now, let count how many files were opened by Ingester:
+Now, let count the number of memory mapping regions by Ingester:
 
 ```bash
-# vm.max_map_count //65536
+# cat /proc/1/maps| wc -l
 ```
-
-This issue was fixed by increase the value of `vm.max_map_count`, so it was exactly the reason.
+Process was crashed when it over `vm.max_map_count`. It was fixed by increase the value of `vm.max_map_count`, so it was exactly the reason.
 
 ## But, what is vm.max_map_count
 
