@@ -4,6 +4,7 @@ date = "2024-12-17"
 author = "Son Vu Thai"
 tags = [
     "Algorithm",
+    "Distributed System",
 ]
 +++
 ## Introduction
