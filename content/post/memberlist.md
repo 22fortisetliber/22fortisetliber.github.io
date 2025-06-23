@@ -15,4 +15,5 @@ In a distributed system with multiple processes, the process group dynamically u
 
 1. Attendance List Protocol
    Developed by Flaviu Cristian, In this protocol, the membership is checked by sending a datagram to all the members some time after a join is completed. This datagram reaches all members within a bounded time and all members check to see if they received it within the right time. If there is a failure, at least one of them does not receive the list and it issues a new join phase. In this phase, the member which has failed does not participate and his membership is removed from the group by other members. This protocol has a reduced message overhead in the absence of changes and is more efficient than the periodic broadcast protocol. This reduced overhead leads to an increase in the failure detection time
+
 2. Periodic Broadcast Protocol
