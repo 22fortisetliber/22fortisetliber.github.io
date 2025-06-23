@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Install Hugo CLI
         run: |
-            sudo apt-get install hugo
+            sudo apt-get install hugo --fix-missing
       - name: Install Dart Sass
         run: sudo snap install dart-sass
       - name: Checkout
