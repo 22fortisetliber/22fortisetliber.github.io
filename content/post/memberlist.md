@@ -1,5 +1,5 @@
 +++
-title = "Memberlist: A Building Block for Distributed Systems"
+title = "Membership: A Building Block for Distributed Systems"
 date = "2025-06-23"
 author = "Son Vu Thai"
 tags = [
