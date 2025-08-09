@@ -5,7 +5,7 @@ date = "2024-12-17"
 author = "Son Vu Thai"
 tags = [
     "Algorithm",
-    "computing",
+    "Computing",
 ]
 +++
 
@@ -33,7 +33,7 @@ sys.byteorder # little
 h = hashlib.md5(b"test")
 dig = h.digest() # digest() return bytes sequence, in this case output is in little endian
 print(int.from_bytes(dig, "little")) # 327925494462908176265137084817260384009
-    
+
 ```
 -----------------------------------------------------------------------------------------------------------------
 **Computer 2:**
