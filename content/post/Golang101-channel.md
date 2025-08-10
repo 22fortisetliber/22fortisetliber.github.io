@@ -172,7 +172,6 @@ func main() {
 This demonstrates how channels can represent as a service, where:
 
 - Request struct: Represents as a service request with:
-
   - args []int: Input data for service
   - resultChan chan int: Private channel for receiving the result
 
