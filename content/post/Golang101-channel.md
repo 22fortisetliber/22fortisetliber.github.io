@@ -26,7 +26,7 @@ tags = [
 
 # I. Channels
 
-Channels are typed conduits through which you can send and receive values using the channel operator ==&larr;== .
+Channels are typed conduits through which you can send and receive values using the channel operator <mark>&larr;</mark> .
 
 ## 1.1. Creating and Using Channels
 
@@ -177,7 +177,7 @@ This demonstrates how channels can represent as a service, where:
   - resultChan chan int: Private channel for receiving the result
 
 - server() function:
-  - Listen on a ==requests channel== for incoming request
+  - Listen on a <mark>requests channel</mark> for incoming request
   - Spawns a goroutine for each request
   - Send result back through each request's private result channel
 
@@ -222,7 +222,7 @@ func main() {
 
 **Rules for Closing:**
 
-- Only the ==sender== should close a channel
+- Only the <mark>sender</mark> should close a channel
 - Sending on a closed channel causes panic
 - Receiving from a closed channel returns zero value
 - Use v, ok := <-ch to check if channel is closed
@@ -259,9 +259,9 @@ func main() {
 
 **Explain:**
 
-- ==ch := make(chan int)== create an unbuffered int channel
-- ==ch <- 42== this code attempt to send value (42), but block because there is no receiver ready
-- ==fmt.Println(<-ch)== This line would receive the value 42, but it is never reached because promgram stuck on the previous line
+- <mark>ch := make(chan int)</mark> create an unbuffered int channel
+- <mark>ch <- 42</mark> this code attempt to send value (42), but block because there is no receiver ready
+- <mark>fmt.Println(<-ch)</mark> This line would receive the value 42, but it is never reached because promgram stuck on the previous line
 - That's happend because all of the logic (unbuffered channel, send, receive) running on only one goroutine
 
 **&rarr; To fix this problem, we can use other goroutine, or buffered channel**
@@ -300,4 +300,4 @@ func main() {
 ```
 
 **Explain:**
-After initial nil channel ==ch== on main(), 2 concurrent goroutine try to access this channel (goroutine 1 tries to create channel, goroutine 2 tries to send value 42 to channel, which leads to an undefined behavior due ti concurent read/write of the same memory location).
+After initial nil channel <mark>ch</mark> on main(), 2 concurrent goroutine try to access this channel (goroutine 1 tries to create channel, goroutine 2 tries to send value 42 to channel, which leads to an undefined behavior due ti concurent read/write of the same memory location).
